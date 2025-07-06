@@ -1,0 +1,17 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: my-demo-cluster
+  region: us-east-1
+
+vpc:
+  nat:
+    gateway: Disable
+
+nodeGroups:
+  - name: demo-node-group
+    instanceType: t2.micro
+    desiredCapacity: 1
+    privateNetworking: false   # public subnet me rahega
+    volumeSize: 10             # Disk size in GB
