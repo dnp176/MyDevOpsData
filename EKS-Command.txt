@@ -1,0 +1,1 @@
+Delete Cluster: eksctl delete cluster --name my-demo-cluster --region us-east-1
