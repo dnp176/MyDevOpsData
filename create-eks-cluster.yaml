@@ -11,7 +11,9 @@ vpc:
 
 nodeGroups:
   - name: demo-node-group
-    instanceType: t2.micro
-    desiredCapacity: 1
-    privateNetworking: false   # public subnet me rahega
-    volumeSize: 10             # Disk size in GB
+    instanceType: t2.micro          # Free Tier instance type
+    desiredCapacity: 3              # 👉 यहाँ node की संख्या change कर सकते हो (1 से 20 जैसा चाहो)
+    minSize: 1                      # Minimum node scaling limit
+    maxSize: 4                     # Maximum node scaling limit
+    privateNetworking: false        # Public subnet में node launch होगा
+    volumeSize: 8                  # Disk size in GB
